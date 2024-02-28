@@ -1,0 +1,197 @@
+@font-face {
+    font-family: monument;
+    src: url(./font/Monument.ttf);
+}
+@font-face {
+    font-family: monument-regular;
+    src: url(./font/Monument\ Regular.otf);
+}
+@font-face {
+    font-family: mango-regular;
+    src: url(./font/MangoGrotesque-Regular.ttf);
+}
+@font-face {
+    font-family: sans-medium;
+    src: url(./font/GeneralSans-Medium.otf);
+}
+@font-face {
+    font-family: apercu-medium;
+    src: url(./font/apercu-medium-pro.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    height: fit-content;
+    width: 100vw;
+    background-color: whitesmoke;
+}
+#navbar{
+    /* border: 3px solid black; */
+    width: 100vw;
+    height: 10vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0.5vw;
+    column-gap: 10px;
+}
+#nav-items{
+    /* background-color: wheat; */
+    width: 20vw;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 15%;
+    padding: 0.5vw;
+}
+#nav-items li{
+    list-style: none;
+    font-family: monument-regular;
+    font-size: 0.9vw;
+    cursor: pointer;
+}
+#navbar i{
+    height: fit-content;
+    width: fit-content;
+    background-color: black;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.8vw;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+#home{
+    /* background-color: yellowgreen; */
+    width: 100vw;
+    /* height: fit-content; */
+    height: calc(100vh - 10vh);
+    overflow-x: hidden;
+}
+#home::-webkit-scrollbar{
+    display: none;
+}
+#heading{
+    margin-top: 1vw;
+    width: 100vw;
+    height: fit-content;
+    /* background-color: antiquewhite; */
+    padding: 1vw;
+}
+#heading h1{
+    padding-left: 5vw;
+    font-family: mango-regular;
+    font-size: 7.5vw;
+    letter-spacing: 0.4vw;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#description{
+    width: 100vw;
+    height: 35vh;
+    /* background-color: rgb(168, 120, 58); */
+    padding: 1vw;
+    display: flex;
+}
+#description .left{
+    height: 100%;
+    width: 50%;
+    font-family: sans-medium;
+    font-size: 1.2vw;
+    font-weight: 400;
+    padding-left: 5vw;
+}
+#description .right{
+    height: 100%;
+    width: 50%;
+    /* background-color: lightblue;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1vw;
+}
+#description .right h1{
+    width: 50%;
+    border: none;
+    padding: 1.5vw;
+    /* background-color: whitesmoke; */
+    font-family: apercu-medium;
+    font-size: 1.4vw;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+#description .right h1:nth-last-child(1)
+{
+    border-bottom: 2px solid black;
+}
+.image{
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
+}
+#home img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+@media (max-width:600px) {
+    #navbar{
+        background-color: transparent;
+    }
+    #nav-items{
+        display: none;
+    }
+    #navbar i{
+        margin-right: 1.4vh;
+        font-size: 2.5vh;
+        padding: 0.8vh;
+    }
+    #heading h1{
+        line-height: 7.5vh;
+        font-size: 8.5vh;
+        letter-spacing: 0.4vw;
+    }
+    #description{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    #description .left{
+        width: 100%;
+        font-size: 1.2vh;
+    }
+    #description .right{
+        align-items: flex-start;
+        padding-top: 0.5vh;
+        padding-left: 2.5vh;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #description .right h1{
+        justify-content: space-between;
+        width: 85vw;
+        padding: 1.4vh;
+        font-size: 1.5vh;
+    }
+    #description .right h1:nth-last-child(1)
+    {
+        border-bottom: 2px solid black;
+    }
+    .image{
+        height: 44.2vh;
+    }
+}
